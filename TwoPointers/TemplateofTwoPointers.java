@@ -1,24 +1,32 @@
 package TwoPointers;
 
+import java.util.Arrays;
+
 public class TemplateofTwoPointers {
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 5};
+        int target = 5;
+
+        int[] result = twoSum(arr, target);
+        System.out.println(Arrays.toString(result));
+    }
+
+    public static int[] twoSum(int[] arr, int target) {
         int left = 0;
         int right = arr.length - 1;
-        int target = 5;
 
         while(left < right) {
             int sum = arr[left] + arr[right];
 
             if(sum == target) {
-                System.out.println(left + " " + right);
-                break;
-            } else if (sum > target){
+                return new int[] {left, right};
+            } else if(sum > target) {
                 right--;
             } else {
                 left++;
             }
         }
+        return new int[] {};
     }
 }
 
