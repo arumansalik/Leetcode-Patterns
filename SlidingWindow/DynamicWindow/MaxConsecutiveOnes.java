@@ -1,4 +1,4 @@
-package SlidingWindow.FixedWindow;
+package SlidingWindow.DynamicWindow;
 
 public class MaxConsecutiveOnes {
     public static int longestOnes(int[] nums, int k) {
@@ -6,17 +6,13 @@ public class MaxConsecutiveOnes {
         int maxLen = 0;
 
         for(int right = 0; right < nums.length; right++) {
-            if(nums[right] == 0) {
-                k--;
-            }
+            if(nums[right] == 0) k--;
 
             while(k < 0) {
-                if(nums[left] == 0) {
-                    k++;
-                }
+                if(nums[left] == 0) k++;
                 left++;
             }
-            maxLen = Math.max(maxLen, right - left + 1);
+            maxLen = Math.max(maxLen ,right - left + 1);
         }
         return maxLen;
     }
