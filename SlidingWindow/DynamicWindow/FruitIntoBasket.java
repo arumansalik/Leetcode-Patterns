@@ -39,3 +39,19 @@ public class FruitIntoBasket {
     }
 
 }
+
+/*
+Start at index 0:
+
+Pick 1 → basket 1
+
+Pick 2 → basket 2
+
+Pick 1 → already in basket 1
+
+Pick 2 → already in basket 2
+
+Pick 3 → ❌ can't fit (we already used 2 types)
+
+So maximum you could pick in one go = 4 fruits ([1, 2, 1, 2])
+    */
