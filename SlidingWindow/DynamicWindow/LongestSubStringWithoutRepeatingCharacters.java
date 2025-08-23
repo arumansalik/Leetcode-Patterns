@@ -9,7 +9,7 @@ public class LongestSubStringWithoutRepeatingCharacters {
         while(right < s.length()) {
             if(!set.contains(s.charAt(right))) {
                 set.add(s.charAt(right));
-                maxLen = Math.max(maxLen ,right - left + 1);
+                maxLen = Math.max(maxLen, right - left + 1);
                 right++;
             } else {
                 set.remove(s.charAt(left));

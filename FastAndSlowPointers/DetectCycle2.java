@@ -1,28 +1,26 @@
 package FastAndSlowPointers;
 
-class Solution {
+public class DetectCycle2 {
     public ListNode detectCycle(ListNode head) {
-        if (head == null || head.next == null) return null;
+        if(head == null || head.next == null) {
+            return null;
+        }
 
         ListNode slow = head, fast = head;
 
-        // Step 1: Detect cycle
-        while (fast != null && fast.next != null) {
+        while(fast != null && fast.next != null ) {
             slow = slow.next;
             fast = fast.next.next;
-            if (slow == fast) break; // cycle detected
+            if(slow == fast) break;
         }
 
-        // No cycle
-        if (fast == null || fast.next == null) return null;
+        if(fast == null || fast.next == null) return null;
 
-        // Step 2: Find cycle start
         slow = head;
-        while (slow != fast) {
+        while(slow != fast) {
             slow = slow.next;
             fast = fast.next;
         }
-
-        return slow; // Start of cycle
+        return slow;
     }
 }
