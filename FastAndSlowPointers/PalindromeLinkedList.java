@@ -48,25 +48,25 @@ public class PalindromeLinkedList {
         ListNode head1 = createList(arr1);
         System.out.println("List 1 is palindrome? " + isPalindrome(head1));
 
-//        // Example 2: Not a palindrome
-//        int[] arr2 = {1, 2, 3, 4};
-//        ListNode head2 = createList(arr2);
-//        System.out.println("List 2 is palindrome? " + isPalindrome(head2));
-//
-//        // Example 3: Palindrome with odd length
-//        int[] arr3 = {1, 2, 3, 2, 1};
-//        ListNode head3 = createList(arr3);
-//        System.out.println("List 3 is palindrome? " + isPalindrome(head3));
-//
-//        // Example 4: Single element (always palindrome)
-//        int[] arr4 = {7};
-//        ListNode head4 = createList(arr4);
-//        System.out.println("List 4 is palindrome? " + isPalindrome(head4));
-//
-//        // Example 5: Empty list (considered palindrome)
-//        int[] arr5 = {};
-//        ListNode head5 = createList(arr5);
-//        System.out.println("List 5 is palindrome? " + isPalindrome(head5));
+        // Example 2: Not a palindrome
+        int[] arr2 = {1, 2, 3, 4};
+        ListNode head2 = createList(arr2);
+        System.out.println("List 2 is palindrome? " + isPalindrome(head2));
+
+        // Example 3: Palindrome with odd length
+        int[] arr3 = {1, 2, 3, 2, 1};
+        ListNode head3 = createList(arr3);
+        System.out.println("List 3 is palindrome? " + isPalindrome(head3));
+
+        // Example 4: Single element (always palindrome)
+        int[] arr4 = {7};
+        ListNode head4 = createList(arr4);
+        System.out.println("List 4 is palindrome? " + isPalindrome(head4));
+
+        // Example 5: Empty list (considered palindrome)
+        int[] arr5 = {};
+        ListNode head5 = createList(arr5);
+        System.out.println("List 5 is palindrome? " + isPalindrome(head5));
     }
 
 }
