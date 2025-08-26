@@ -17,10 +17,35 @@ public class maximumPointsYouCanObtainFromCards {
         return maxSum;
     }
 
+    public static int maxiPoints2(int[] nums, int k) {
+        int lSum1 = 0, rSum1 = 0, maxSum1 = 0;
+
+        for(int i = 0; i  <= k - 1; i++) {
+            lSum1 = lSum1 + nums[i];
+        }
+        maxSum1 = lSum1;
+        int RIndex = nums.length - 1;
+
+        for (int i = k - 1; i >= 0 ; i--) {
+            lSum1 = lSum1 - nums[i];
+            rSum1 = rSum1 + nums[RIndex];
+            RIndex = RIndex - 1;
+
+            maxSum1 = Math.max(maxSum1, lSum1 + rSum1);
+        }
+        return maxSum1;
+    }
+
     public static void main(String[] args) {
         int[] arr = {6, 2, 3, 4, 7, 2, 1, 7, 1};
         int k = 4;
         int ans = maxiPoints(arr, k);
         System.out.println("Maximum Points You Can Obtain from Cards is: " + ans );
+
+        int[] arr1 = {1,2,3,4,5,6,1};
+        int k1 = 3;
+        int ans1 = maxiPoints2(arr1, k1);
+        System.out.println("Maximum Points You Can Obtain from Cards is: " + ans1 );
     }
 }
+
