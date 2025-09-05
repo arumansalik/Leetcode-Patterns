@@ -52,4 +52,4 @@ Instead of solving problems randomly, learning these patterns helps to:
 ## 🛠 How to Use
 1. Clone the repository:
    ```bash
-   git clone https://github.com/<your-username>/Leetcode-Patterns.git
+   git clone https://github.com/arumansalik/Leetcode-Patterns.git
