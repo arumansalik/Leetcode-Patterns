@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.PriorityQueue;
 
-public class KthSmalestElements {
+public class KSmallestElements {
     public static List<Integer> findSmallest(int[] arr, int k) {
         PriorityQueue<Integer> maxHeap = new PriorityQueue<>((a, b) -> b - a);
 
