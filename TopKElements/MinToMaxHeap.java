@@ -48,4 +48,3 @@ public class MinToMaxHeap {
         System.out.println();
     }
 }
-
